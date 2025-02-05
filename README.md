@@ -6,9 +6,7 @@ The "Hello from Angular!👋" application is just a starter to show a minimalist
 Requirements
 ------------
 
-* [Node.js][1]
-* [NPM][1], [PNPM][2] or [Yarn][3]
-* [Angular CLI][4]
+* [Docker Desktop][1]
 
 Installation
 ------------
@@ -25,11 +23,18 @@ Go on the project root folder:
 cd poc-angular/
 ```
 
+Execute this command to launch docker container in dev:
+
+```console
+docker compose -f docker/compose.yaml up -d --build
+```
+
 Install JavaScript dependencies:
 
 ```console
-pnpm install
+docker compose -f docker/compose.yaml exec node pnpm install
 ```
+
 
 _Or use the equivalent command with npm or yarn_
 
@@ -44,7 +49,7 @@ There's no need to configure anything before running the application. There are
 Run this command:
 
 ```bash
-ng serve
+docker compose -f docker/compose.yaml exec node ng serve --host 0.0.0.0
 ```
 
 Then access the application in your browser at the given URL (<http://localhost:4200> by default).
@@ -52,7 +57,7 @@ Then access the application in your browser at the given URL (<http://localhost:
 **Option 2. Run the application in prod mode**
 
 ```bash
-ng build
+docker compose -f docker/compose.yaml exec node ng build
 ```
 You now have your fresh JavaScript files for production 🚀.
 You can check everything is OK by running the `ng serve` command in the output directory created by the `ng build` command.
@@ -63,10 +68,7 @@ Tests
 Execute this command to run tests:
 
 ```bash
-ng test
+docker compose -f docker/compose.yaml exec node ng test --watch=false
 ```
 
-[1]: https://nodejs.org/en/download/package-manager
-[2]: https://pnpm.io/installation
-[3]: https://yarnpkg.com/getting-started/install
-[4]: https://angular.dev/installation
+[1]: https://www.docker.com/products/docker-desktop/
