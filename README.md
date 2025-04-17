@@ -14,7 +14,7 @@ Installation
 Clone this repository:
 
 ```console
-https://github.com/abdounikarim/poc-angular
+https://github.com/ProofOfConceptFactory/poc-angular
 ```
 
 Go on the project root folder:
