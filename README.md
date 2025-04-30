@@ -26,7 +26,7 @@ cd poc-angular/
 Execute this command to launch docker container in dev:
 
 ```console
-docker compose -f docker/compose.yaml up -d --build
+DOCKER_DEFAULT_PLATFORM=linux/amd64 docker compose -f docker/compose.yaml up -d --build
 ```
 
 Install JavaScript dependencies:
