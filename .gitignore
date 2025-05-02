@@ -43,3 +43,6 @@ Thumbs.db
 
 # Pnpm
 /.pnpm-store
+
+# mkcert
+/certs/

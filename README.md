@@ -7,6 +7,7 @@ Requirements
 ------------
 
 * [Docker Desktop][1]
+* [mkcert][2]
 
 Installation
 ------------
@@ -21,6 +22,14 @@ Go on the project root folder:
 
 ```console
 cd poc-angular/
+```
+
+Install certificate to use HTTPS:
+
+```console
+mkcert -install
+mkdir -p certs
+mkcert -key-file certs/poc-angular.key.pem -cert-file certs/poc-angular.crt.pem localhost
 ```
 
 Execute this command to launch docker container in dev:
@@ -49,10 +58,10 @@ There's no need to configure anything before running the application. There are
 Run this command:
 
 ```bash
-docker compose -f docker/compose.yaml exec node ng serve --host 0.0.0.0
+docker compose -f docker/compose.yaml exec node ng serve --host 0.0.0.0 --ssl true --ssl-key "certs/poc-angular.key.pem" --ssl-cert "certs/poc-angular.crt.pem"
 ```
 
-Then access the application in your browser at the given URL (<http://localhost:4200> by default).
+Then access the application in your browser at the given URL (<https://localhost:4200> by default).
 
 **Option 2. Run the application in prod mode**
 
@@ -72,3 +81,4 @@ docker compose -f docker/compose.yaml exec node ng test --watch=false
 ```
 
 [1]: https://www.docker.com/products/docker-desktop/
+[2]: https://github.com/FiloSottile/mkcert
