@@ -1,6 +1,8 @@
 Hello from Angular!👋
 ========================
 
+[![GitHub Pages](https://github.com/ProofOfConceptFactory/poc-angular/actions/workflows/github-pages.yaml/badge.svg)](https://github.com/ProofOfConceptFactory/poc-angular/actions/workflows/github-pages.yaml)
+
 The "Hello from Angular!👋" application is just a starter to show a minimalist Angular app.
 
 Requirements
