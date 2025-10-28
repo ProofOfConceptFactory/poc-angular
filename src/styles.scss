@@ -1,8 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+$font-size-h1: 3.125rem;
+$font-weight-500: 500;
+$percent-100: 100%;
+
 h1 {
-  font-size: 3.125rem;
-  font-weight: 500;
-  line-height: 100%;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-500;
+  line-height: $percent-100;
   letter-spacing: -0.125rem;
   margin: 0;
   font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
