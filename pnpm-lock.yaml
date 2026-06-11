@@ -74,7 +74,7 @@ importers:
         version: 2.2.0(jasmine-core@6.2.0)(karma-jasmine@5.1.0(karma@6.4.4))(karma@6.4.4)
       sass:
         specifier: ^1.89.1
-        version: 1.99.0
+        version: 1.100.0
       typescript:
         specifier: ~6.0.0
         version: 6.0.2
@@ -218,6 +218,7 @@ packages:
   '@angular/animations@20.3.4':
     resolution: {integrity: sha512-b+vFsTtMYtOrcZZLXB4BxuErbrLlShFT6khTvkwu/pFK8ri3tasyJGkeKRZJHao5ZsWdZSqV2mRwzg7vphchnA==}
     engines: {node: ^20.19.0 || ^22.12.0 || >=24.0.0}
+    deprecated: '@angular/animations is deprecated. Use `animate.enter` and `animate.leave` instead. For more information see: https://v22.angular.dev/guide/animations.'
     peerDependencies:
       '@angular/core': 20.3.4
 
@@ -2112,6 +2113,10 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
+  chokidar@5.0.0:
+    resolution: {integrity: sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==}
+    engines: {node: '>= 20.19.0'}
+
   chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
@@ -2814,8 +2819,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  immutable@5.1.5:
-    resolution: {integrity: sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A==}
+  immutable@5.1.6:
+    resolution: {integrity: sha512-q1swsS8K7L8usSHuOqF2TAoCCkonYz0SG38wLAggaa4Wml70zixIvt2ql4coQ2C2B3hTjltJry4r6bULwgAXLQ==}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -3690,6 +3695,10 @@ packages:
     resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
 
+  readdirp@5.0.0:
+    resolution: {integrity: sha512-9u/XQ1pvrQtYyMpZe7DXKv2p5CNvyVwzUB6uhLAnQwHMSgKMBR62lc7AHljaeteeHXn11XTAaLLUVZYVZyuRBQ==}
+    engines: {node: '>= 20.19.0'}
+
   reflect-metadata@0.2.2:
     resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
 
@@ -3815,13 +3824,13 @@ packages:
       webpack:
         optional: true
 
-  sass@1.90.0:
-    resolution: {integrity: sha512-9GUyuksjw70uNpb1MTYWsH9MQHOHY6kwfnkafC24+7aOMZn9+rVMBxRbLvw756mrBFbIsFg6Xw9IkR2Fnn3k+Q==}
-    engines: {node: '>=14.0.0'}
+  sass@1.100.0:
+    resolution: {integrity: sha512-B5j0rYMlinhhOo9tjQebMVVn0TfyXAF+wB3b2ggZUuJ/is/Y+7+JGjirAMxHZ9Z3hIP98NPfamlAkBHa1lAaXQ==}
+    engines: {node: '>=20.19.0'}
     hasBin: true
 
-  sass@1.99.0:
-    resolution: {integrity: sha512-kgW13M54DUB7IsIRM5LvJkNlpH+WhMpooUcaWGFARkF1Tc82v9mIWkCbCYf+MBvpIUBSeSOTilpZjEPr2VYE6Q==}
+  sass@1.90.0:
+    resolution: {integrity: sha512-9GUyuksjw70uNpb1MTYWsH9MQHOHY6kwfnkafC24+7aOMZn9+rVMBxRbLvw756mrBFbIsFg6Xw9IkR2Fnn3k+Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -4219,6 +4228,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   validate-npm-package-license@3.0.4:
@@ -4559,7 +4569,7 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@angular-devkit/architect': 0.2003.5(chokidar@4.0.3)
-      '@angular-devkit/build-webpack': 0.2003.5(chokidar@4.0.3)(webpack-dev-server@5.2.2(webpack@5.101.2))(webpack@5.101.2(esbuild@0.25.9))
+      '@angular-devkit/build-webpack': 0.2003.5(chokidar@4.0.3)(webpack-dev-server@5.2.2(webpack@5.101.2(esbuild@0.25.9)))(webpack@5.101.2(esbuild@0.25.9))
       '@angular-devkit/core': 20.3.5(chokidar@4.0.3)
       '@angular/build': 20.3.5(@angular/compiler-cli@20.3.4(@angular/compiler@20.3.4)(typescript@6.0.2))(@angular/compiler@20.3.4)(@angular/core@20.3.4(@angular/compiler@20.3.4)(rxjs@7.8.2)(zone.js@0.16.0))(@angular/platform-browser@20.3.4(@angular/animations@20.3.4(@angular/core@20.3.4(@angular/compiler@20.3.4)(rxjs@7.8.2)(zone.js@0.16.0)))(@angular/common@20.3.4(@angular/core@20.3.4(@angular/compiler@20.3.4)(rxjs@7.8.2)(zone.js@0.16.0))(rxjs@7.8.2))(@angular/core@20.3.4(@angular/compiler@20.3.4)(rxjs@7.8.2)(zone.js@0.16.0)))(@types/node@24.7.0)(chokidar@4.0.3)(jiti@1.21.7)(karma@6.4.4)(less@4.4.0)(postcss@8.5.6)(terser@5.43.1)(tslib@2.8.1)(typescript@6.0.2)
       '@angular/compiler-cli': 20.3.4(@angular/compiler@20.3.4)(typescript@6.0.2)
@@ -4609,8 +4619,8 @@ snapshots:
       tslib: 2.8.1
       typescript: 6.0.2
       webpack: 5.101.2(esbuild@0.25.9)
-      webpack-dev-middleware: 7.4.2(webpack@5.101.2)
-      webpack-dev-server: 5.2.2(webpack@5.101.2)
+      webpack-dev-middleware: 7.4.2(webpack@5.101.2(esbuild@0.25.9))
+      webpack-dev-server: 5.2.2(webpack@5.101.2(esbuild@0.25.9))
       webpack-merge: 6.0.1
       webpack-subresource-integrity: 5.1.0(webpack@5.101.2(esbuild@0.25.9))
     optionalDependencies:
@@ -4641,12 +4651,12 @@ snapshots:
       - webpack-cli
       - yaml
 
-  '@angular-devkit/build-webpack@0.2003.5(chokidar@4.0.3)(webpack-dev-server@5.2.2(webpack@5.101.2))(webpack@5.101.2(esbuild@0.25.9))':
+  '@angular-devkit/build-webpack@0.2003.5(chokidar@4.0.3)(webpack-dev-server@5.2.2(webpack@5.101.2(esbuild@0.25.9)))(webpack@5.101.2(esbuild@0.25.9))':
     dependencies:
       '@angular-devkit/architect': 0.2003.5(chokidar@4.0.3)
       rxjs: 7.8.2
       webpack: 5.101.2(esbuild@0.25.9)
-      webpack-dev-server: 5.2.2(webpack@5.101.2)
+      webpack-dev-server: 5.2.2(webpack@5.101.2(esbuild@0.25.9))
     transitivePeerDependencies:
       - chokidar
 
@@ -4706,7 +4716,7 @@ snapshots:
       tinyglobby: 0.2.14
       tslib: 2.8.1
       typescript: 6.0.2
-      vite: 7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.99.0)(terser@5.43.1)
+      vite: 7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)
       watchpack: 2.4.4
     optionalDependencies:
       '@angular/core': 20.3.4(@angular/compiler@20.3.4)(rxjs@7.8.2)(zone.js@0.16.0)
@@ -6317,7 +6327,7 @@ snapshots:
 
   '@vitejs/plugin-basic-ssl@2.1.0(vite@7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1))':
     dependencies:
-      vite: 7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.99.0)(terser@5.43.1)
+      vite: 7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1)
 
   '@webassemblyjs/ast@1.14.1':
     dependencies:
@@ -6675,6 +6685,10 @@ snapshots:
   chokidar@4.0.3:
     dependencies:
       readdirp: 4.1.2
+
+  chokidar@5.0.0:
+    dependencies:
+      readdirp: 5.0.0
 
   chownr@2.0.0: {}
 
@@ -7440,7 +7454,7 @@ snapshots:
   image-size@0.5.5:
     optional: true
 
-  immutable@5.1.5: {}
+  immutable@5.1.6: {}
 
   import-fresh@3.3.1:
     dependencies:
@@ -8352,6 +8366,8 @@ snapshots:
 
   readdirp@4.1.2: {}
 
+  readdirp@5.0.0: {}
+
   reflect-metadata@0.2.2: {}
 
   regenerate-unicode-properties@10.2.2:
@@ -8483,18 +8499,18 @@ snapshots:
       sass: 1.90.0
       webpack: 5.101.2(esbuild@0.25.9)
 
-  sass@1.90.0:
+  sass@1.100.0:
     dependencies:
-      chokidar: 4.0.3
-      immutable: 5.1.5
+      chokidar: 5.0.0
+      immutable: 5.1.6
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
 
-  sass@1.99.0:
+  sass@1.90.0:
     dependencies:
       chokidar: 4.0.3
-      immutable: 5.1.5
+      immutable: 5.1.6
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
@@ -8846,7 +8862,7 @@ snapshots:
       minizlib: 3.1.0
       yallist: 5.0.0
 
-  terser-webpack-plugin@5.3.14(esbuild@0.25.9)(webpack@5.101.2):
+  terser-webpack-plugin@5.3.14(esbuild@0.25.9)(webpack@5.101.2(esbuild@0.25.9)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -8973,7 +8989,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite@7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.99.0)(terser@5.43.1):
+  vite@7.1.5(@types/node@24.7.0)(jiti@1.21.7)(less@4.4.0)(sass@1.90.0)(terser@5.43.1):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -8986,7 +9002,7 @@ snapshots:
       fsevents: 2.3.3
       jiti: 1.21.7
       less: 4.4.0
-      sass: 1.99.0
+      sass: 1.90.0
       terser: 5.43.1
 
   void-elements@2.0.1: {}
@@ -9003,7 +9019,7 @@ snapshots:
   weak-lru-cache@1.2.2:
     optional: true
 
-  webpack-dev-middleware@7.4.2(webpack@5.101.2):
+  webpack-dev-middleware@7.4.2(webpack@5.101.2(esbuild@0.25.9)):
     dependencies:
       colorette: 2.0.20
       memfs: 4.49.0
@@ -9014,7 +9030,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.101.2(esbuild@0.25.9)
 
-  webpack-dev-server@5.2.2(webpack@5.101.2):
+  webpack-dev-server@5.2.2(webpack@5.101.2(esbuild@0.25.9)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -9042,7 +9058,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.2(webpack@5.101.2)
+      webpack-dev-middleware: 7.4.2(webpack@5.101.2(esbuild@0.25.9))
       ws: 8.18.3
     optionalDependencies:
       webpack: 5.101.2(esbuild@0.25.9)
@@ -9089,7 +9105,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.14(esbuild@0.25.9)(webpack@5.101.2)
+      terser-webpack-plugin: 5.3.14(esbuild@0.25.9)(webpack@5.101.2(esbuild@0.25.9))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
     transitivePeerDependencies:
