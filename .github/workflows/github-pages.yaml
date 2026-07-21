@@ -44,7 +44,7 @@ jobs:
         run: pnpm run ng serve --host 0.0.0.0 --ssl true --ssl-key "certs/poc-angular.key.pem" --ssl-cert "certs/poc-angular.crt.pem" &
       - name: Requirements for testing
         run: |
-          curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/google-chrome.gpg
+          curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | gpg --batch --yes --dearmor -o /usr/share/keyrings/google-chrome.gpg
           echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 
           sudo apt-get update
